@@ -14,5 +14,3 @@ supabase: Client = create_client(url, key)
 # Example query to fetch all records from a table named 'nascar_stats'
 response = supabase.table("nascar_stats").select("*").execute()
 print(response.data)
-
-
