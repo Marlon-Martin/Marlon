@@ -11,10 +11,7 @@ key: str = os.getenv("SUPABASE_KEY")
 # Example: select all rows from a table
 supabase: Client = create_client(url, key)
 
-# Only fetch driver_name and avg_speed columns
-response = supabase.table("nascar_stats") \
-                   .select("driver_name, avg_speed") \
-                   .execute()
-
+# Example query to fetch all records from a table named 'nascar_stats'
+response = supabase.table("nascar_stats").select("*").execute()
 print(response.data)
 
